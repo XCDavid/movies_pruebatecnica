@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/profileFragment">
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.openpay.pruebatecnica.ui.usecases.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/moviesFragment"
+        android:name="com.openpay.pruebatecnica.ui.usecases.movies.MoviesFragment"
+        android:label="Movies"
+        tools:layout="@layout/fragment_movies" />
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.openpay.pruebatecnica.ui.usecases.map.MapFragment"
+        android:label="Map"
+        tools:layout="@layout/fragment_map" />
+    <fragment
+        android:id="@+id/uploadFragment"
+        android:name="com.openpay.pruebatecnica.ui.usecases.upload.UploadFragment"
+        android:label="Upload"
+        tools:layout="@layout/fragment_upload" />
+</navigation>

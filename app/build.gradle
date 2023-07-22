@@ -4,9 +4,19 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'com.google.gms.google-services'
+    id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
 }
 
 android {
+    signingConfigs {
+        debug2 {
+        storePassword '123'
+            keyAlias '123'
+            keyPassword '123'
+        }
+    }
     namespace 'com.openpay.pruebatecnica'
     compileSdk 33
 
@@ -27,11 +37,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = JavaVersion.VERSION_17.toString()
     }
     buildFeatures {
         viewBinding = true
@@ -60,6 +70,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     // Room components
     implementation "androidx.room:room-runtime:2.5.1"
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
     // To use Kotlin annotation processing tool (kapt)
     kapt("androidx.room:room-compiler:2.5.1")
     // optional - Kotlin Extensions and Coroutines support for Room
@@ -67,6 +78,24 @@ dependencies {
     //dagger hilt
     implementation "com.google.dagger:hilt-android:2.44"
     kapt "com.google.dagger:hilt-android-compiler:2.44"
+    //Navigation
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.6.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.6.0'
+    //Firebase
+    implementation(platform("com.google.firebase:firebase-bom:32.2.0"))
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    //Firebase Storage no deberia ser necesario pero con las anteriores mi gradle no obtuvo la libreria storage
+    implementation 'com.google.firebase:firebase-storage-ktx:20.2.1'
+    implementation 'com.google.firebase:firebase-auth:22.1.0'
+    //Firestore
+    implementation 'com.google.firebase:firebase-firestore-ktx'
+    //Picasso
+    implementation 'com.squareup.picasso:picasso:2.8'
+    //Paging
+    implementation "androidx.paging:paging-runtime-ktx:3.1.1"
+    //Maps
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+
     //Test
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

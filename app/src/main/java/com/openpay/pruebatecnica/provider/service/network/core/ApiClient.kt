@@ -1,14 +1,20 @@
 package com.openpay.pruebatecnica.provider.service.network.core
 
-import com.openpay.pruebatecnica.data.model.ResponseModel
+import com.openpay.pruebatecnica.data.model.ResponseProfileModel
+import com.openpay.pruebatecnica.data.model.ResponseRatedMovieModel
+import com.openpay.pruebatecnica.data.model.ResponseRatedTVModel
 import retrofit2.Response
-import retrofit2.http.Body
-import retrofit2.http.POST
+import retrofit2.http.GET
 import retrofit2.http.Url
 
 interface ApiClient {
-    @POST
-    suspend fun getData(@Url url:String): Response<ResponseModel>
-    @POST
-    suspend fun sendData(@Url url: String, @Body data: Any): Response<ResponseModel>
+    @GET
+    suspend fun getDataRatedTV(@Url url: String): Response<ResponseRatedTVModel>
+
+    @GET
+    suspend fun getDataProfile(@Url url: String): Response<ResponseProfileModel>
+
+    @GET
+    suspend fun getDataMovies(@Url url: String): Response<ResponseRatedMovieModel>
+
 }

@@ -22,5 +22,27 @@ class RoomModule {
 
     @Singleton
     @Provides
-    fun provideUserDao(db: RoomDatabase) = db.getUsuarioDAO()
+    fun provideUserDao(db: RoomDatabase) = db.getUserDAO()
+    @Singleton
+    @Provides
+    fun provideProfileDao(db: RoomDatabase) = db.getProfileDAO()
+
+    @Singleton
+    @Provides
+    fun provideRatedTVDao(db: RoomDatabase) = db.getRatedTVDAO()
+
+    @Singleton
+    @Provides
+    fun provideRatedMovieDao(db: RoomDatabase) = db.getRatedMovieDAO()
+    @Singleton
+    @Provides
+    fun providePopularMovieDao(db: RoomDatabase) = db.getPopularMovieDAO()
+
+    @Singleton
+    @Provides
+    fun provideTopRatedMovieDao(db: RoomDatabase) = db.getTopRatedMovieDAO()
+
+    @Singleton
+    @Provides
+    fun provideTrendingMovieDao(db: RoomDatabase) = db.getTrendingMovieDAO()
 }

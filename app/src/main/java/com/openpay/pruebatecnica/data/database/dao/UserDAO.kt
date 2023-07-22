@@ -8,20 +8,20 @@ import androidx.room.Update
 import com.openpay.pruebatecnica.data.database.entity.Usuario
 
 @Dao
-interface UsuarioDAO {
+interface UserDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(usuario: Usuario): Long
+    suspend fun insert(user: Usuario): Long
 
     @Update
-    suspend fun update(usuario: Usuario): Int
+    suspend fun update(user: Usuario): Int
 
-    @Query("DELETE FROM rh_usuario")
+    @Query("DELETE FROM user")
     suspend fun deleteAll()
 
-    @Query("SELECT * from rh_usuario ORDER BY username ASC")
+    @Query("SELECT * from user ORDER BY username ASC")
     suspend fun getAll():List<Usuario>
 
-    @Query("SELECT * from rh_usuario where username = :username")
+    @Query("SELECT * from user where username = :username")
     suspend fun findByUsername(username: String): Usuario?
 
 }
