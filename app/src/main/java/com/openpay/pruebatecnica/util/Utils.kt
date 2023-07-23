@@ -1,16 +1,18 @@
 
 package com.openpay.pruebatecnica.util
 
+import android.content.ContentResolver
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
 import android.provider.OpenableColumns
 import java.io.ByteArrayOutputStream
+import java.io.IOException
 
 class Utils {
     companion object {
-        fun getFileNameFromUri(uri: Uri, context: Context): CharSequence? {
+        fun getFileNameFromUri(uri: Uri, context: Context): String {
             var displayName = ""
             val cursor = context.contentResolver.query(uri, null, null, null, null)
             cursor?.use {
@@ -38,6 +40,18 @@ class Utils {
 
         fun byteArrayToBitmap(byteArray: ByteArray): Bitmap? {
             return BitmapFactory.decodeByteArray(byteArray, 0, byteArray.size)
+        }
+
+        fun getBitmapFromUri(contentResolver: ContentResolver, imageUri: Uri): Bitmap? {
+            return try {
+                // Utilizamos el ContentResolver para abrir un flujo de entrada desde la Uri
+                val inputStream = contentResolver.openInputStream(imageUri)
+                // Decodificamos el flujo de entrada en un Bitmap
+                BitmapFactory.decodeStream(inputStream)
+            } catch (e: IOException) {
+                e.printStackTrace()
+                null
+            }
         }
 
     }

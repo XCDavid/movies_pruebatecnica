@@ -13,4 +13,8 @@ object Constants {
     const val POPULAR_MOVIES = "movie/popular?page=%s"
     const val TOP_RATED_MOVIES = "movie/top_rated?page=%s"
     const val TRENDING_MOVIES = "trending/movie/day"
+    const val INTENT_FRAGMENT_MESSAGE = "message_in"
+    enum class SwipeDirection {
+        LEFT, RIGHT
+    }
 }

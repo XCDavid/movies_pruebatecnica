@@ -4,4 +4,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="item_list_white_pressed">#E1E0E0</color>
     <color name="transparent">#00000000</color>
+    <color name="colorAccent">#FFC107</color>
+    <color name="gray">#A35E5E5E</color>
+    <color name="grayTransparent">#C3313131</color>
+    <color name="red">#EF1717</color>
 </resources>

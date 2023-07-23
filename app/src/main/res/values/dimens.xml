@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="text_size_category_movie">34sp</dimen>
+    <dimen name="active_title_profile">20sp</dimen>
+    <dimen name="inactive_title_profile">10sp</dimen>
 </resources>
