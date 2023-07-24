@@ -29,7 +29,7 @@ La aplicación tiene un MainActivity que almacena y se encarga de la navegación
 
 - Profile: Consulta información del perfil como imagen de avatar y username, también consulta la lista de pelícuas calificadas y la lista de series de TV calificadas. La lista de peliculas y series de TV y su imagen se guardan en la base de datos interna con Room y se recuperan en caso de que el usuario no tenga conexióna internet.
 
-|![Profile movies](images/profile_1.png =270x600)  |  ![Profile tv](images/profile_2.png)
+|![Profile movies](images/profile_1.png)  |  ![Profile tv](images/profile_2.png)
 
 - Movies: Consulta la lista de pelícuas populares, la lista de peliculas mejor calificadas y la lista de películas recomendadas. Su consulta se hace con Paging para poder ir consultado las siguientes peliculas de la lista sin necesidad de agregar más interacción para el usuario. La lista de peliculas por tipo y su imagen se guardan en la base de datos interna con Room y se recuperan en caso de que el usuario no tenga conexióna internet.
 
