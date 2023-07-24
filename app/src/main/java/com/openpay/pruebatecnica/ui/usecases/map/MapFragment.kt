@@ -110,8 +110,6 @@ class MapFragment : Fragment(), OnMapReadyCallback {
             val isGranted = entry.value
             if (!isGranted) {
                 allPermissionsGranted = false
-//                Toast.makeText(requireContext(), "Debes aceptar todos los permisos", Toast.LENGTH_SHORT).show()
-//                return@forEach
             }
         }
         if (allPermissionsGranted) {

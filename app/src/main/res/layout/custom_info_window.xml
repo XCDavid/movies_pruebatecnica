@@ -4,7 +4,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:padding="10dp"
+    android:padding="@dimen/general_padding_10dp"
     android:background="@drawable/custom_info_window_background">
 
     <TextView
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="2"
         android:textColor="@android:color/white"
-        android:textSize="14sp" />
+        android:textSize="@dimen/custom_marker_map_message_14sp" />
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"

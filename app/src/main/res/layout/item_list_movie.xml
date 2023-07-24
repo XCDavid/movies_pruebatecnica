@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/item_list_layout"
-    android:layout_width="200dp"
-    android:layout_height="250dp"
-    android:layout_marginStart="5dp"
-
-    android:layout_marginTop="10dp"
-    android:layout_marginEnd="5dp"
-    android:layout_marginBottom="10dp"
+    android:layout_width="@dimen/item_list_width"
+    android:layout_height="@dimen/item_list_height"
+    android:layout_marginStart="@dimen/item_list_margin_start_end"
+    android:layout_marginTop="@dimen/general_margin_10dp"
+    android:layout_marginEnd="@dimen/item_list_margin_start_end"
+    android:layout_marginBottom="@dimen/general_margin_10dp"
     android:orientation="vertical">
 
 
     <LinearLayout
-        android:layout_width="200dp"
-        android:layout_height="150dp"
+        android:layout_width="@dimen/item_list_iv_height"
+        android:layout_height="@dimen/item_list_iv_width"
         android:gravity="center_vertical"
         android:orientation="vertical">
 
@@ -23,20 +21,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:elevation="12dp"
-            android:padding="10dp"
-            android:layout_margin="7dp"
-            app:cardCornerRadius="0dp">
+            android:layout_margin="@dimen/general_margin_7dp"
+            android:elevation="@dimen/general_elevation"
+            android:padding="@dimen/general_padding_10dp">
 
             <ImageView
                 android:id="@+id/item_image_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="0dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/baseline_movie"
                 android:background="@color/white"
-                />
+                android:scaleType="centerCrop"
+                android:src="@drawable/baseline_movie" />
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>
@@ -45,13 +40,13 @@
         android:id="@+id/tv_item_list_notification_ly_image_file"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="@dimen/general_margin_7dp"
         android:gravity="top"
         android:orientation="vertical"
         android:paddingStart="0dp"
-        android:paddingTop="5dp"
+        android:paddingTop="@dimen/low_padding_start_end_5dp"
         android:paddingEnd="0dp"
-        android:paddingBottom="5dp"
-        android:layout_margin="7dp"
+        android:paddingBottom="@dimen/low_padding_start_end_5dp"
         android:visibility="visible">
 
         <LinearLayout
@@ -94,11 +89,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
-
                 />
-
         </LinearLayout>
     </LinearLayout>
-
-
 </LinearLayout>

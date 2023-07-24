@@ -4,4 +4,31 @@
     <style name="TransparentDialogStyle" parent="Theme.AppCompat.Dialog">
         <item name="android:windowBackground">@android:color/transparent</item>
     </style>
+
+    <style name="TitleMovieListTextViewStyle">
+        <item name="android:textSize">@dimen/text_size_category_movie</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="SpaceRecyclerViewStyle">
+        <item name="android:layout_height">@dimen/height_movies_list</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:paddingEnd">@dimen/movies_list_end_padding</item>
+        <item name="android:paddingTop">@dimen/low_padding_top_bottom_6dp</item>
+        <item name="android:paddingBottom">@dimen/low_padding_top_bottom_6dp</item>
+    </style>
+    <style name="ButtonUploadChoose">
+        <item name="android:paddingStart">@dimen/padding_button_start_end</item>
+        <item name="android:paddingTop">@dimen/general_padding_10dp</item>
+        <item name="android:paddingEnd">@dimen/padding_button_start_end</item>
+        <item name="android:paddingBottom">@dimen/general_padding_10dp</item>
+        <item name="android:elevation">@dimen/general_elevation</item>
+        <item name="android:layout_marginTop">@dimen/margin_top_button</item>
+        <item name="android:layout_marginBottom">@dimen/margin_bottom_button</item>
+    </style>
+    <style name="ButtonUpload">
+        <item name="android:padding">@dimen/general_padding_10dp</item>
+        <item name="android:elevation">@dimen/general_elevation</item>
+        <item name="android:layout_width">180dp</item>
+        <item name="android:layout_height">60dp</item>
+    </style>
 </resources>

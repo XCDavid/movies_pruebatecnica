@@ -1,5 +1,18 @@
 <resources>
-    <string name="app_name">Prueba Tecnica Openpay</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">Prueba Tecnica</string>
+    <string name="profile_fragment_title">Profile</string>
+    <string name="movies_fragment_title">Movies</string>
+    <string name="movies_fragment_list_popular_title">Popular Movies</string>
+    <string name="movies_fragment_list_top_rated_title">Top Rated Movies</string>
+    <string name="movies_fragment_list_recommended_title">Recommended Movies</string>
+    <string name="map_fragment_title">Map</string>
+    <string name="upload_fragment_title">Upload</string>
+    <string name="profile_fragment_title_movies">Rated Movies</string>
+    <string name="profile_fragment_title_tv">Rated TV</string>
+    <string name="upload_fragment_btn_choose">Choose pictures</string>
+    <string name="upload_fragment_btn_upload">Upload</string>
+    <string name="item_list_rated_name">Name: </string>
+    <string name="item_list_rated_overview">Overview: </string>
+    <string name="item_list_rated_rating">Rating: </string>
+    <string name="item_list_rated_first">First Air Date: </string>
 </resources>

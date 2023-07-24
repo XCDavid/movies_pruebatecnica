@@ -4,11 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.usecases.movies.MoviesFragment"
-
-    android:paddingStart="10dp"
-    android:paddingEnd="10dp"
-    android:paddingTop="6dp"
-    android:paddingBottom="6dp">
+    android:paddingStart="@dimen/general_padding_10dp"
+    android:paddingEnd="@dimen/general_padding_10dp"
+    android:paddingTop="@dimen/low_padding_top_bottom_6dp"
+    android:paddingBottom="@dimen/low_padding_top_bottom_6dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,48 +17,35 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Popular Movies"
-            android:textSize="@dimen/text_size_category_movie"
-            android:textStyle="bold"
+            android:text="@string/movies_fragment_list_popular_title"
+            style="@style/TitleMovieListTextViewStyle"
             />
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_popular_movies"
             android:layout_width="match_parent"
-            android:layout_height="260dp"
-            android:layout_gravity="center_vertical"
-            android:paddingEnd="10dp"
-            android:paddingTop="6dp"
-            android:paddingBottom="6dp"
+            style="@style/SpaceRecyclerViewStyle"
             />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Top Rated Movies"
-            android:textSize="@dimen/text_size_category_movie"
-            android:textStyle="bold"
+            android:text="@string/movies_fragment_list_top_rated_title"
+            style="@style/TitleMovieListTextViewStyle"
             />
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_top_rated_movies"
             android:layout_width="match_parent"
-            android:layout_height="260dp"
-            android:paddingEnd="10dp"
-            android:paddingTop="6dp"
-            android:paddingBottom="6dp"
+            style="@style/SpaceRecyclerViewStyle"
             />
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Recommended Movies"
-            android:textSize="@dimen/text_size_category_movie"
-            android:textStyle="bold"
+            android:text="@string/movies_fragment_list_recommended_title"
+            style="@style/TitleMovieListTextViewStyle"
             />
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_recommended_movies"
             android:layout_width="match_parent"
-            android:layout_height="260dp"
-            android:paddingEnd="10dp"
-            android:paddingTop="6dp"
-            android:paddingBottom="6dp"
+            style="@style/SpaceRecyclerViewStyle"
             />
     </LinearLayout>
 </ScrollView>

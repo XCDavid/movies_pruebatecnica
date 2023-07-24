@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="@dimen/item_list_upload_height"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/item_list_layout"
-    android:padding="0dp">
+    >
     <View
         android:id="@+id/progressBackground"
         android:layout_width="0dp"
@@ -12,28 +12,25 @@
         android:background="@color/gray"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-
         app:layout_constraintBottom_toBottomOf="@id/card_view_image_upload"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_image_upload"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="@dimen/profile_image_view"
+        android:layout_height="@dimen/profile_image_view"
         android:layout_gravity="center"
-        android:elevation="10dp"
-        android:padding="0dp"
-        app:cardCornerRadius="45dp"
+        android:elevation="@dimen/general_elevation"
+        app:cardCornerRadius="@dimen/corner_radius_profile"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginStart="@dimen/general_margin_10dp"
+        android:layout_marginTop="@dimen/general_margin_10dp"
+        android:layout_marginBottom="@dimen/general_margin_10dp"
         >
         <ImageView
             android:id="@+id/item_image_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="0dp"
             android:src="@drawable/image_24"
             android:scaleType="centerCrop"/>
     </androidx.cardview.widget.CardView>
@@ -45,7 +42,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/card_view_image_upload"
         android:gravity="center_vertical|start"
-        android:padding="10dp"
+        android:padding="@dimen/general_padding_10dp"
         >
         <TextView
             android:id="@+id/name"
