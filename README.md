@@ -29,19 +29,19 @@ La aplicación tiene un MainActivity que almacena y se encarga de la navegación
 
 - Profile: Consulta información del perfil como imagen de avatar y username, también consulta la lista de pelícuas calificadas y la lista de series de TV calificadas. La lista de peliculas y series de TV y su imagen se guardan en la base de datos interna con Room y se recuperan en caso de que el usuario no tenga conexióna internet.
 
-|![Profile movies](images/profile_1.png)  |  ![Profile tv](images/profile_2.png)
+|![Profile movies](images/profile_1.png =270x600)  |  ![Profile tv](images/profile_2.png)
 
 - Movies: Consulta la lista de pelícuas populares, la lista de peliculas mejor calificadas y la lista de películas recomendadas. Su consulta se hace con Paging para poder ir consultado las siguientes peliculas de la lista sin necesidad de agregar más interacción para el usuario. La lista de peliculas por tipo y su imagen se guardan en la base de datos interna con Room y se recuperan en caso de que el usuario no tenga conexióna internet.
 
 ![Movies](images/movies.png)
 
-- Map: Muestra el mapa y solicita permisos de ubicación al usuario para poder registrar su ubicación cada 5 minutos, cuando obtiene su ubiación la camara se mueve a la ubicación actual. Cada vezxz que se obtiene un ubicación se notifica al usuario con una notificación push y se guarda en Firebase databse con un timestamp actual.
+- Map: Muestra el mapa y solicita permisos de ubicación al usuario para poder registrar su ubicación cada 5 minutos, cuando obtiene su ubiación la camara se mueve a la ubicación actual. Cada vezxz que se obtiene un ubicación se notifica al usuario con una notificación push y se guarda en Firestore databse con un timestamp actual.
 
-|![Map](images/map_1.png)  |  ![Map](images/map_2.png)
+|![Map](images/map_1.png)  |  ![Map](images/map_2.png)  |  ![Map-Firebase](images/map_3.png)
 
 - Upload: Permite al usuario seleccionar una o varias imagenes del dispositvo y subirlas a Firebase Storage para su almacenamiento. Se usa Fragment Dialog para notificar en casos de excepción.
 
-|![Upload](images/upload_1.png)  |  ![Upload](images/upload_2.png)  |![Upload](images/upload_3.png)
+|![Upload](images/upload_1.png)  |  ![Upload](images/upload_2.png)  |  ![Upload](images/upload_3.png)  |  ![Upload](images/upload_4.png)
 
 
 En futuras versiones del proyecto, consideramos las siguientes mejoras y adiciones:
