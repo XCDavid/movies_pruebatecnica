@@ -106,7 +106,7 @@ class UploadFragment : Fragment() {
             uploadTask.addOnProgressListener { taskSnapshot ->
                 val progress = (100.0 * taskSnapshot.bytesTransferred / taskSnapshot.totalByteCount).toInt()
                 Log.i(MY_TAG, "Progreso de la subida de $imageName: $progress%")
-                listAdapter?.updateProgress(imageUploadModel.id, progress)
+//                listAdapter?.updateProgress(imageUploadModel.id, progress)
             }
 
             // Agregar listener para la finalización exitosa de la subida
