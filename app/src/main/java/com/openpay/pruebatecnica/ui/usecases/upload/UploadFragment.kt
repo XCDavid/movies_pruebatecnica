@@ -40,7 +40,7 @@ class UploadFragment : Fragment() {
     ): View {
         _binding = FragmentUploadBinding.inflate(inflater, container, false)
         val emptyList: List<ImageUploadModel> = emptyList()
-        listAdapter = ImageUploadAdapter(emptyList){vo -> onItemSelected(vo)}
+        listAdapter = ImageUploadAdapter()//(emptyList){vo -> onItemSelected(vo)}
         binding.uploadImagesList.layoutManager = LinearLayoutManager(context)
         binding.uploadImagesList.adapter = listAdapter
 
@@ -86,7 +86,7 @@ class UploadFragment : Fragment() {
 //                    binding.uploadImagesList.text = Utils.getFileNameFromUri(imageUri, requireContext())
                     imageUploadModelList.add(ImageUploadModel(0, imageName, imageUri, 0))
                 }
-                listAdapter?.updateList(imageUploadModelList.toList())
+                listAdapter?.submitList(imageUploadModelList.toList())
             }
         }
     }

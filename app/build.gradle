@@ -10,15 +10,12 @@ plugins {
 }
 
 android {
-    signingConfigs {
-        debug2 {
-        storePassword '123'
-            keyAlias '123'
-            keyPassword '123'
-        }
-    }
     namespace 'com.openpay.pruebatecnica'
     compileSdk 33
+
+    buildFeatures {
+        buildConfig = true
+    }
 
     defaultConfig {
         applicationId "com.openpay.pruebatecnica"
@@ -30,10 +27,31 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    buildTypes {
+    signingConfigs {
         release {
+            storeFile file('C:\\Users\\Teknei\\Documents\\Personal\\CursoKotlin\\testopenpay.jks')
+            storePassword '123456'
+            keyAlias 'key0'
+            keyPassword '123456'
+        }
+    }
+
+
+    buildTypes {
+        debug {
+            debuggable true
+// Otras configuraciones de debug
+            buildConfigField "boolean", "LOGS_ENABLED", "true"
+            buildConfigField "String", "ACCES_TOKEN", "\"eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjQyNjIyNWJlODI5MjI5NTk1ZDJmMzljYjk4NTYxYyIsInN1YiI6IjY0YjZmNjExZDAzNmI2MDBmMGVhMmUyZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.DwUgp3Yflpq2p9gccVNxbNnbGsgMMK8GUvVUzEz4j-k\""
+        }
+        release {
+            // Otras configuraciones de release
+            buildConfigField "boolean", "LOGS_ENABLED", "false"
+            buildConfigField "String", "ACCES_TOKEN", "\"eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxNjQyNjIyNWJlODI5MjI5NTk1ZDJmMzljYjk4NTYxYyIsInN1YiI6IjY0YjZmNjExZDAzNmI2MDBmMGVhMmUyZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.DwUgp3Yflpq2p9gccVNxbNnbGsgMMK8GUvVUzEz4j-k\""
+            debuggable false
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
         }
     }
     compileOptions {
@@ -54,7 +72,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
     // Fragment
-    implementation "androidx.fragment:fragment-ktx:1.6.0"
+    implementation "androidx.fragment:fragment-ktx:1.6.1"
     // Activity
     implementation "androidx.activity:activity-ktx:1.7.2"
     // ViewModel
@@ -97,6 +115,9 @@ dependencies {
     implementation 'com.google.android.gms:play-services-maps:18.1.0'
     //Firebase messaging
     implementation 'com.google.firebase:firebase-messaging:23.2.0'
+
+    //Splash
+    implementation 'androidx.core:core-splashscreen:1.0.1'
 
     //Test
     testImplementation 'junit:junit:4.13.2'

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.openpay.pruebatecnica.R
 import com.openpay.pruebatecnica.data.model.ImageUploadModel
@@ -14,8 +15,8 @@ import com.openpay.pruebatecnica.util.DiffUtilsImageModel
 import com.openpay.pruebatecnica.util.Utils
 
 
-class ImageUploadAdapter(private var items: List<ImageUploadModel>, private val onclickListener: (ImageUploadModel) -> Unit) :
-    RecyclerView.Adapter<ImageUploadAdapter.ViewHolder>() {
+class ImageUploadAdapter() :
+    ListAdapter<ImageUploadModel, ImageUploadAdapter.ViewHolder>(DiffUtilsImageModel()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
